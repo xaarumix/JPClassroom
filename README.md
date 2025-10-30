@@ -173,17 +173,17 @@
     <h2 class="section-title">🎓 JLPT Study Hub</h2>
     <div class="grid">
       <div class="card">
-        <h3>JLPT N5 Essentials</h3>
+        <h3>JLPT N5 Metrial</h3>
         <p>Basic grammar, vocab & kanji practice for beginners.</p>
         <button class="btn">Download</button>
       </div>
       <div class="card">
-        <h3>JLPT N4 Practice Kit</h3>
+        <h3>JLPT N4 Metrial</h3>
         <p>Next-level materials to strengthen your foundation.</p>
         <button class="btn">Download</button>
       </div>
       <div class="card">
-        <h3>JLPT N3 Challenge</h3>
+        <h3>JLPT N3 Metrial</h3>
         <p>Get ready for the intermediate level with practice sheets.</p>
         <button class="btn">Download</button>
       </div>
