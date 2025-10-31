@@ -165,32 +165,222 @@
   <section class="hero">
     <h2>Learn Japanese with Anime Vibes 🇯🇵</h2>
     <p>Free JLPT study materials & latest anime updates — all in one place 🌸</p>
-    <button class="btn">Start Learning</button>
-    <button class="btn">Read Anime News</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JPClassroom | Learn Japanese with Anime Vibes 🇯🇵</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Nunito:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(180deg, #fff9fc 0%, #e7f3ff 100%);
+      color: #1a1a1a;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      color: #ff7aa2;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1a1a1a;
+      transition: color 0.2s;
+      font-size: 0.9rem;
+    }
+
+    nav a:hover {
+      color: #ff7aa2;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 1.2rem;
+      background: url('https://raw.githubusercontent.com/xaarumix/JPClassroom/main/hero.jpg') no-repeat center/cover;
+      background-blend-mode: soft-light;
+    }
+
+    .hero h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      color: #1a1a1a;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: #333;
+      margin: 1rem 0 2rem;
+    }
+
+    .btn {
+      padding: 0.8rem 1.4rem;
+      border: none;
+      border-radius: 30px;
+      background-color: #ff7aa2;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 0.4rem;
+      transition: transform 0.2s, background 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background-color: #ff8fb3;
+    }
+
+    section {
+      padding: 3rem 5%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.5rem;
+      color: #ff7aa2;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      color: #1a1a1a;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      background: #fff0f5;
+      color: #555;
+    }
+
+    footer a {
+      color: #ff7aa2;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* Sakura Petals Animation */
+    @keyframes fall {
+      0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+
+    .petal {
+      position: fixed;
+      top: -10vh;
+      width: 20px;
+      height: 20px;
+      background: url('https://raw.githubusercontent.com/xaarumix/JPClassroom/main/charryleaf.png') no-repeat center/contain;
+      animation: fall linear infinite;
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    /* 🌸 Mobile Optimizations */
+    @media (min-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+
+      .hero h2 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JPClassroom</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#jlpt">JLPT</a>
+      <a href="#news">News</a>
+      <a href="#downloads">Join</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <h2>Learn Japanese with Anime Vibes 🇯🇵</h2>
+    <p>Free JLPT study materials & latest anime updates — all in one place 🌸</p>
+    <button class="btn" onclick="document.querySelector('#jlpt').scrollIntoView({behavior:'smooth'})">Start Learning</button>
+    <button class="btn" onclick="document.querySelector('#news').scrollIntoView({behavior:'smooth'})">Read Anime News</button>
   </section>
 
-  <section>
+  <section id="jlpt">
     <h2 class="section-title">🎓 JLPT Study Hub</h2>
     <div class="grid">
       <div class="card">
-        <h3>JLPT N5 Metrial</h3>
+        <h3>JLPT N5 Material</h3>
         <p>Basic grammar, vocab & kanji practice for beginners.</p>
-        <button class="btn">Download</button>
+        <button class="btn" onclick="window.open('./pdfs/N5.pdf', '_blank')">Download</button>
       </div>
       <div class="card">
-        <h3>JLPT N4 Metrial</h3>
+        <h3>JLPT N4 Material</h3>
         <p>Next-level materials to strengthen your foundation.</p>
-        <button class="btn">Download</button>
+        <button class="btn" onclick="window.open('./pdfs/N4.pdf', '_blank')">Download</button>
       </div>
       <div class="card">
-        <h3>JLPT N3 Metrial</h3>
+        <h3>JLPT N3 Material</h3>
         <p>Get ready for the intermediate level with practice sheets.</p>
-        <button class="btn">Download</button>
+        <button class="btn" onclick="window.open('./pdfs/N3.pdf', '_blank')">Download</button>
       </div>
     </div>
   </section>
 
-  <section>
+  <section id="news">
     <h2 class="section-title">📰 Anime News & Updates</h2>
     <div class="grid">
       <div class="card">
@@ -208,12 +398,33 @@
     </div>
   </section>
 
+  <section id="downloads">
+    <h2 class="section-title">Stay Connected</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Discord</h3>
+        <p>Join our server for JLPT discussions & anime fun.</p>
+        <button class="btn" onclick="window.open('https://discord.gg/', '_blank')">Join</button>
+      </div>
+      <div class="card">
+        <h3>Telegram</h3>
+        <p>Get daily study updates & anime posts!</p>
+        <button class="btn" onclick="window.open('https://t.me/', '_blank')">Join</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">🌸 About JPClassroom</h2>
+    <p style="text-align:center;max-width:600px;margin:auto;">JPClassroom is your cozy online corner for learning Japanese through anime vibes. Created by <b>Aditya</b>, it offers free JLPT study materials, anime updates, and inspiration for learners everywhere 🇯🇵✨</p>
+  </section>
+
   <footer>
     © 2025 JPClassroom | Made with ❤️ by Aditya | <a href="#">Contact</a>
   </footer>
 
   <script>
-    // Floating sakura petals animation
+    // Floating sakura petals
     for(let i=0; i<10; i++){
       const petal = document.createElement('div');
       petal.classList.add('petal');
@@ -223,5 +434,7 @@
       document.body.appendChild(petal);
     }
   </script>
+</body>
+</html>
 </body>
 </html>
